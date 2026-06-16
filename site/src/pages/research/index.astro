@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const sections = [
+  {
+    slug: 'clef-notes',
+    title: 'Cleef Notes — The Archive',
+    description: 'AI, ownership, and the future of knowledge. Course notes from the Cleef Notes community on Skool.',
+    count: 9,
+  },
+];
+---
+
+<Layout title="Research" description="Course notes and study wikis by Etienne Nel.">
+  <header class="mb-12">
+    <p class="text-sm font-medium text-blue-600 mb-2">etiennenel.com</p>
+    <h1 class="text-3xl font-semibold text-gray-900">Research</h1>
+    <p class="text-gray-500 mt-2">Structured notes from courses, books, and deep dives.</p>
+  </header>
+
+  <div class="space-y-4">
+    {sections.map(s => (
+      <a href={`/research/${s.slug}`} class="group flex items-start gap-6 p-6 border border-gray-100 rounded-xl hover:border-blue-200 hover:shadow-sm transition-all">
+        <div class="flex-1">
+          <h2 class="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-1">{s.title}</h2>
+          <p class="text-sm text-gray-500">{s.description}</p>
+        </div>
+        <span class="text-sm text-gray-300 group-hover:text-blue-400 transition-colors mt-0.5">→</span>
+      </a>
+    ))}
+  </div>
+</Layout>

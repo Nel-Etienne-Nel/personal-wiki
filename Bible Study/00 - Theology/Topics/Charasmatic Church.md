@@ -1,0 +1,22 @@
+
+a problem i have with the charasmatic church is how good friday is such a lovey dovey Jesus loves you thing when in reality its a horrific day, and i feel the modern church has lost what "Fear of the Lord meant" You fear him because of how power full he is, that how it should be, yes he loves you and has grace but there should still be a sense of fear, that keeps us on the right path
+
+# **The domestication of God is a real problem.**
+
+The charismatic stream, at its worst, has produced a Jesus who is essentially a cosmic best friend — affirming, warm, endlessly encouraging, never demanding, never terrifying. And what gets quietly dropped in that framing is the whole biblical witness of a God before whom mountains melt, before whom Isaiah collapsed as a dead man, before whom John in Revelation fell as though dead, before whom the disciples on the transfiguration mountain fell on their faces and were _terrified_. That's not incidental detail — that's the consistent human response to genuine encounter with God throughout Scripture.
+
+Good Friday specifically deserves to be held in that register. What actually happened on the cross, when you sit with it seriously, is not primarily heartwarming. The eternal Son of God, through whom all things were made, was publicly tortured to death. The sky went dark. The earth shook. The temple curtain — thick as a man's hand — tore from top to bottom. Creation itself convulsed. Matthew records that hardened Roman soldiers, men who had watched countless crucifixions, were _filled with awe_ and said "truly this was the Son of God." That's closer to terror than it is to a worship set with mood lighting.
+
+# **On the fear of the Lord specifically —**
+[[Fear of the Lord]]
+You're right that the modern church has largely collapsed it into mere reverence or respectful admiration — a kind of polite acknowledgment that God is impressive. But the Hebrew _yirat YHWH_ is far more visceral than that. It carries the weight of genuine dread, of standing before something so vastly other and powerful that self-preservation instinct kicks in. The Proverbs call it the _beginning_ of wisdom — not the culmination, the _starting point_. You don't graduate beyond it. It's the foundation on which everything else is built.
+
+And here's what I think the modern church misses most: **fear of the Lord and love of God are not opposites that need to be balanced.** They're two dimensions of the same encounter. You can only truly love someone you know truly — and to know God truly is to know that you are in the presence of consuming fire. The love doesn't cancel the fear; the fear actually gives the love its gravity and its weight. A love that costs you nothing, demands nothing, and requires no reckoning with who God actually is — that's not love, that's sentimentality.
+
+# **The pastoral consequence of losing this is enormous.**
+
+When God is primarily experienced as affirming and safe, there's no internal governor on behavior. Grace becomes license. Repentance becomes unnecessary because there's nothing genuinely threatening about continuing in sin — God will just be gracious about it. The fear of the Lord, rightly understood, is not a _replacement_ for grace — it's what keeps grace from being treated cheaply. Bonhoeffer called cheap grace the greatest enemy of the church. He was describing exactly what you're seeing.
+[[Outside Articles]]
+You've taught on this before — Sardis in Revelation 3 is essentially a church that lost exactly this. The appearance of life, the reputation for vitality, but inwardly dead. And Jesus's letter to them is not warm and encouraging. It's a warning that he will come like a thief — unexpected, unannounced, and with consequence. That's not the language of a life coach. That's the language of a King.
+
+The charismatic impulse toward joy and love and celebration isn't wrong in itself — Psalm 16, Philippians, the whole jubilant stream of Scripture is real. But joy without weight becomes shallow. The deepest joy in Scripture is always joy that has passed _through_ something — through the fear, through the darkness, through the reckoning. Easter Sunday means something only because of what Good Friday actually was.

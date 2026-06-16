@@ -1,0 +1,52 @@
+---
+import Layout from './Layout.astro';
+
+interface Props {
+  title: string;
+  module?: string;
+  lesson?: string;
+  lastUpdated?: string;
+  tags?: string[];
+  breadcrumbs: { label: string; href: string }[];
+}
+
+const { title, module: mod, lesson, lastUpdated, tags = [], breadcrumbs } = Astro.props;
+---
+
+<Layout title={title}>
+  <nav class="flex items-center gap-2 text-sm text-gray-400 mb-8 flex-wrap">
+    {breadcrumbs.map((crumb, i) => (
+      <>
+        {i > 0 && <span>/</span>}
+        {i < breadcrumbs.length - 1
+          ? <a href={crumb.href} class="hover:text-gray-700 transition-colors">{crumb.label}</a>
+          : <span class="text-gray-600">{crumb.label}</span>
+        }
+      </>
+    ))}
+  </nav>
+
+  <article>
+    <header class="mb-8 pb-8 border-b border-gray-100">
+      {mod && <p class="text-sm text-blue-600 font-medium mb-2">{mod}</p>}
+      <h1 class="text-3xl font-semibold text-gray-900 leading-tight">
+        {lesson && <span class="text-gray-400 font-normal mr-2 text-2xl">{lesson}</span>}
+        {title}
+      </h1>
+      <div class="flex items-center gap-4 mt-4 text-sm text-gray-400">
+        {lastUpdated && <time>{lastUpdated}</time>}
+        {tags.length > 0 && (
+          <div class="flex gap-2">
+            {tags.map(tag => (
+              <span class="px-2 py-0.5 bg-gray-100 text-gray-500 rounded text-xs">{tag}</span>
+            ))}
+          </div>
+        )}
+      </div>
+    </header>
+
+    <div class="prose prose-gray max-w-none prose-headings:font-semibold prose-a:text-blue-600 prose-code:text-sm">
+      <slot />
+    </div>
+  </article>
+</Layout>

@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home">
+  <section class="py-8">
+    <h1 class="text-4xl font-semibold text-gray-900 mb-4">Etienne Nel</h1>
+    <p class="text-lg text-gray-500 max-w-2xl leading-relaxed">
+      Builder, thinker, and lifelong learner based in Africa.
+      I write about AI, business, and the ideas I'm exploring.
+    </p>
+  </section>
+
+  <section class="mt-16 grid gap-6 sm:grid-cols-2">
+    <a href="/research" class="group block p-6 border border-gray-100 rounded-xl hover:border-blue-200 hover:shadow-sm transition-all">
+      <div class="text-xl mb-2">📚</div>
+      <h2 class="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-1">Research</h2>
+      <p class="text-sm text-gray-500">Course notes, study wikis, and structured learning.</p>
+    </a>
+    <a href="/about" class="group block p-6 border border-gray-100 rounded-xl hover:border-blue-200 hover:shadow-sm transition-all">
+      <div class="text-xl mb-2">👋</div>
+      <h2 class="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-1">About</h2>
+      <p class="text-sm text-gray-500">Who I am, what I'm working on, and how to reach me.</p>
+    </a>
+  </section>
+</Layout>

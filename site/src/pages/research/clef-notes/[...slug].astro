@@ -1,0 +1,42 @@
+---
+import { getCollection, render } from 'astro:content';
+import NoteLayout from '../../../layouts/NoteLayout.astro';
+import { toSlug } from '../../../utils/slug';
+
+export async function getStaticPaths() {
+  const notes = await getCollection('clef-notes');
+
+  return notes.map(note => ({
+    params: { slug: toSlug(note.id) },
+    props: { note },
+  }));
+}
+
+const { note } = Astro.props;
+const { Content } = await render(note);
+
+const title = note.data.title ?? note.id.split('/').pop()?.replace(/\.md$/, '') ?? 'Untitled';
+const slugParts = Astro.params.slug?.split('/') ?? [];
+
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Research', href: '/research' },
+  { label: 'Cleef Notes', href: '/research/clef-notes' },
+  ...slugParts.slice(0, -1).map((part, i) => ({
+    label: part.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
+    href: '/research/clef-notes/' + slugParts.slice(0, i + 1).join('/'),
+  })),
+  { label: title, href: '#' },
+];
+---
+
+<NoteLayout
+  title={title}
+  module={note.data.module}
+  lesson={note.data.lesson}
+  lastUpdated={note.data.last_updated}
+  tags={note.data.tags}
+  breadcrumbs={breadcrumbs}
+>
+  <Content />
+</NoteLayout>

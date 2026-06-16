@@ -1,0 +1,71 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import { toSlug } from '../../../utils/slug';
+
+const allNotes = await getCollection('clef-notes');
+
+function groupByModule(notes: typeof allNotes) {
+  const map = new Map<string, typeof allNotes>();
+  for (const note of notes) {
+    const parts = note.id.split('/');
+    const moduleFolder = parts.length >= 2 ? parts[parts.length - 2] : 'Root';
+    if (!map.has(moduleFolder)) map.set(moduleFolder, []);
+    map.get(moduleFolder)!.push(note);
+  }
+  return [...map.entries()].sort(([a], [b]) => a.localeCompare(b));
+}
+
+const moduleGroups = groupByModule(allNotes);
+---
+
+<Layout title="Cleef Notes — The Archive" description="AI course notes organised by module.">
+  <nav class="flex items-center gap-2 text-sm text-gray-400 mb-8">
+    <a href="/" class="hover:text-gray-700 transition-colors">Home</a>
+    <span>/</span>
+    <a href="/research" class="hover:text-gray-700 transition-colors">Research</a>
+    <span>/</span>
+    <span class="text-gray-600">Cleef Notes</span>
+  </nav>
+
+  <header class="mb-10">
+    <p class="text-sm font-medium text-blue-600 mb-2">Research</p>
+    <h1 class="text-3xl font-semibold text-gray-900">The Archive</h1>
+    <p class="text-gray-500 mt-2">AI, ownership, and the future of knowledge — Cleef Notes course.</p>
+  </header>
+
+  <div class="space-y-10">
+    {moduleGroups.map(([moduleFolder, notes]) => {
+      const moduleTitle = moduleFolder
+        .replace(/[^a-z0-9]+/gi, ' ')
+        .replace(/^\d+\s+/, '')
+        .trim()
+        .replace(/\b\w/g, c => c.toUpperCase());
+      return (
+        <section>
+          <h2 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">{moduleTitle}</h2>
+          <ul class="space-y-1">
+            {notes.sort((a, b) => a.id.localeCompare(b.id)).map(note => {
+              const slug = toSlug(note.id);
+              const title = note.data.title ?? note.id.split('/').pop()?.replace(/\.md$/, '') ?? 'Untitled';
+              const lesson = note.data.lesson;
+              return (
+                <li>
+                  <a
+                    href={`/research/clef-notes/${slug}`}
+                    class="group flex items-center gap-3 py-2 px-3 rounded-lg hover:bg-gray-50 transition-colors text-sm"
+                  >
+                    {lesson && (
+                      <span class="text-gray-300 font-mono text-xs w-8 shrink-0">{lesson}</span>
+                    )}
+                    <span class="text-gray-700 group-hover:text-blue-600 transition-colors">{title}</span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      );
+    })}
+  </div>
+</Layout>

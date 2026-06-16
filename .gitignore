@@ -1,0 +1,43 @@
+# ── Private vault sections ──────────────────────────────────────────
+Personal/
+Sasha/
+Eve/
+Etienne/
+"Client Work"/
+IndustryOne/
+"Archer Labs"/
+"Archer Labs.md"
+"n8n - Automations"/
+Cerberus/
+Clippings/
+"AI Consulting"/
+AI-Consulting/
+Logistix/
+Ai Consulting/ 
+Archer Labs/
+Client Work/
+n8n - Automations/
+
+
+# ── Loose files not meant for publishing ────────────────────────────
+AgriBrain.md
+Run.md
+2026-05-27.md
+*.base
+*.png
+*.jpg
+*.jpeg
+*.pdf
+Archer Labs.md
+CLAUDE.md 
+# ── Obsidian internals ──────────────────────────────────────────────
+.obsidian/
+
+# ── OS noise ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Astro build artefacts ───────────────────────────────────────────
+site/node_modules/
+site/dist/
+site/.astro/
