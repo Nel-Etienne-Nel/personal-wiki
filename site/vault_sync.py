@@ -12,9 +12,14 @@ from pathlib import Path
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
+# Force unbuffered output so logs appear immediately
+sys.stdout.reconfigure(line_buffering=True)
+sys.stderr.reconfigure(line_buffering=True)
+
 VAULT = Path("/Users/etienne/Documents/EtienneOBS")
 DEBOUNCE_SECONDS = 30   # wait 30s after last change before pushing
-IGNORED = {".obsidian", "site", ".git", "__pycache__", ".DS_Store"}
+IGNORED = {".obsidian", ".git", "__pycache__", ".DS_Store", "node_modules", "dist", ".astro"}
+WATCHED_EXTENSIONS = {".md", ".canvas", ".astro", ".ts", ".css", ".mjs", ".json"}
 
 
 def git(args: list[str]) -> tuple[int, str]:
@@ -34,10 +39,9 @@ class VaultHandler(FileSystemEventHandler):
         if event.is_directory:
             return
         path = Path(event.src_path)
-        # Skip ignored folders and non-markdown files
         if any(part in IGNORED for part in path.parts):
             return
-        if path.suffix not in {".md", ".canvas"}:
+        if path.suffix not in WATCHED_EXTENSIONS:
             return
         self._pending = True
         self._last_change = time.time()
