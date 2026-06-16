@@ -7,7 +7,7 @@ const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const vaultRoot = path.resolve(__dirname, '..');
 
 export default defineConfig({
-  site: 'https://etiennenel.com',
+  site: 'https://site.etiennenel.com',
   vite: {
     plugins: [tailwindcss()],
     server: {
